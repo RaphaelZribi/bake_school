@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chef Form</title>
+</head>
+<body>
+	<form enctype="multipart/form-data" method='POST'>
+		{% csrf_token %}
+		{{ chef_form.as_p }}
+		<input type="submit" value='register'>
+
+	</form>
+</body>
+</html>
+
+
+<form>
+	
+</form>

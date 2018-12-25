@@ -4,7 +4,7 @@ from enrollment_app.models import Enrollment
 
 
 
-class Date(models.Model):
+class SessionDate(models.Model):
 	day = models.DateField()
 	starting_hour = models.TimeField()
 	ending_hour = models.TimeField()
@@ -13,6 +13,7 @@ class Date(models.Model):
 class Location(models.Model):
 	adress = models.TextField()
 	city = models.TextField()
+	
 
 
 class Session(models.Model):
@@ -21,7 +22,7 @@ class Session(models.Model):
 	price = models.IntegerField()
 	requirements = models.TextField(blank=True)
 	image = models.ImageField(blank=True)
-	date = models.ForeignKey(Date, on_delete=models.CASCADE)
+	date = models.ForeignKey(SessionDate, on_delete=models.CASCADE)
 	chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
 	location = models.ForeignKey(Location, on_delete=models.CASCADE)
 	enrollment = models.ForeignKey(Enrollment, on_delete=models.CASCADE)
