@@ -4,6 +4,6 @@ from . import views
 app_name = 'chef_app'
 
 urlpatterns = [
-	path('', views.index, name="index"),
+	path('chefForm/', views.chefForm, name="chefForm"),
 ]
 

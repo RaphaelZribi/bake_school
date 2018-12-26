@@ -4,6 +4,6 @@ from . import views
 app_name = 'class_schedule_app'
 
 urlpatterns = [
-	path('', views.index, name="index"),
+	path('new_session/', views.new_session, name="new_session"),
 ]
 

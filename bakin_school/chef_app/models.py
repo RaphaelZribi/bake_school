@@ -6,5 +6,4 @@ class Chef(models.Model):
 	last_name = models.TextField()
 	description = models.TextField()
 	phone_number = models.TextField()
-	picture = models.ImageField(upload_to='chefs_pictures', blank=True)
-	#session = models.ForeignKey(Session, on_delete=models.CASCADE)
+	picture = models.ImageField(upload_to='images/chef', blank=True)
