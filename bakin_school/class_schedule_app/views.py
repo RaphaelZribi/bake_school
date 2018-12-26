@@ -7,10 +7,8 @@ from class_schedule_app.forms import SessionForm
 def new_session(request):
 	if request.method =='POST':	
 		form = SessionForm(request.POST, request.FILES)
-
-		if  form.is_valid():
+		if form.is_valid():
 			session = form.save()
-
 			if 'image' in request.FILES:
 				form.image = request.FILES['image']
 			

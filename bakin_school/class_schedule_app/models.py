@@ -5,6 +5,7 @@ class Session(models.Model):
 	title         = models.TextField()
 	description   = models.TextField()
 	price         = models.IntegerField()
+	place         = models.IntegerField(default=10)
 	requirements  = models.TextField(blank=True)
 	image         = models.ImageField(upload_to='images/sessions', blank=True)
 	chef          = models.ForeignKey(Chef, on_delete=models.CASCADE)
