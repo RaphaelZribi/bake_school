@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Sessions</title>
+</head>
+<body>
+
+	{% for session in sessions %}
+
+		<p>{{session.title}}</p>
+		
+		<p>{{session.description}}</p>
+	
+		<p>{{session.price}}</p>
+
+		<a href="{% url 'class_schedule_app:session_description' session.id %}"><button> En savoir plus </button></a>
+
+
+
+	{% endfor %}
+
+</body>
+</html>
+
