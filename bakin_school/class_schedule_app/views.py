@@ -10,6 +10,7 @@ def all_sessions(request):
 
 def session_description(request, session_id):
 	session = Session.objects.get(id=session_id)
+
 	return render (request, 'session_description.html', {'session':session})
 
 def new_session(request):

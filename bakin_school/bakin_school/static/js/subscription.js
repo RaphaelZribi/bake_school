@@ -1,3 +1,3 @@
 $('#inscription-form').click(function(){
-	console.log('salut')
+	$.fancybox.open('<div class="message"><h2>Hello!</h2><p>You are awesome!</p></div>');
 });
