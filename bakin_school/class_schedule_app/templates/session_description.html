@@ -1,12 +1,38 @@
 {% extends 'base.html' %}
-	{%block title %}session description{% endblock %}
-
-	
+{%block title %}session description{% endblock %}
 {% block content %}
-	<br>
-	{{session.title}}
-	{{session.description}}
+<br>
+{{session.title}}
+{{session.description}}
+<br>
+<br> 
 
-	<button id="inscription-form">s'inscrire</button>
+	<a class='button' href="#show" id="inscription-button"> s'inscrire</a>
+
+
+<div style="display: none;">
+	<div id="show">
+	<form class='popup-overlay' action="#" id="inscription-form" method="POST">
+		First name:
+		<br>
+		<input type="text" name="firstname" value="Mickey">
+		<br>
+		Last name:
+		<br>
+		<input type="text" name="lastname" value="Mouse">
+		<br>
+		email:
+		<br>
+		<input type="email" name="email" value="">
+		<br>
+		phone:
+		<br>
+		<input type="text" name="phone" value="05">
+		<br>
+		<br><br>
+		<input type="submit" value="Submit">
+	</form>
+	</div>
+</div>
+
 {% endblock %}
-

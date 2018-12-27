@@ -1,3 +1,9 @@
-$('#inscription-form').click(function(){
-	console.log('salut')
+$('#inscription-button').click(function(){
+	$.fancybox.open({
+		src: '#inscription-form',
+		type: 'inline'
+	});
 });
+
+
+
