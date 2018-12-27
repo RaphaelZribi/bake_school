@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>All Sessions</title>
-</head>
-<body>
+{% extends 'base.html' %}
+	{%block title %}All Sessions{% endblock %}
+
+{% block content %}
+
 
 	{% for session in sessions %}
 
@@ -15,10 +14,9 @@
 
 		<a href="{% url 'class_schedule_app:session_description' session.id %}"><button> En savoir plus </button></a>
 
-
-
 	{% endfor %}
 
-</body>
-</html>
+{% endblock %}
+
+
 
