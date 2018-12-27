@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>session description</title>
-</head>
-<body>
+{% extends 'base.html' %}
+	{%block title %}session description{% endblock %}
+
+	
+{% block content %}
+	<br>
 	{{session.title}}
 	{{session.description}}
 
-	<a href=""><button>En Savoir Plus</button></a>
+	<a href=""><button>s'inscrire</button></a>
+{% endblock %}
 
-
-</body>
-</html>
