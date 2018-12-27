@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from class_schedule_app.models import Session
+from class_schedule_app.forms import SessionForm
 
 
 def all_sessions(request):

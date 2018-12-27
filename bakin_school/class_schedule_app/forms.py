@@ -8,8 +8,16 @@ class SessionForm(forms.ModelForm):
 	#starting_hour = forms.DateField(widget = forms.TimeWidget())
 	class Meta():
 		model = Session
-		fields = ('title', 'description', 'price', 'requirements', 'image', 'chef', 'day', 'starting_hour', 'ending_hour', 'address', 'city')
+		fields = ('title', 'mini_description', 'description', 'price', 'requirements', 'image', 'chef', 'day', 'starting_hour', 'ending_hour', 'address', 'city')
+		widgets = {
+          'title': forms.Textarea(attrs={'rows':4, 'cols':15}),
+          'mini_description': forms.Textarea(attrs={'rows':4, 'cols':15}),
+          'description': forms.Textarea(attrs={'rows':4, 'cols':15}),
+          'price': forms.Textarea(attrs={'rows':4, 'cols':15}),
+          'requirements': forms.Textarea(attrs={'rows':4, 'cols':15}),
+          'title': forms.Textarea(attrs={'rows':4, 'cols':15}),
 
+        }
 
 	
 	

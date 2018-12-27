@@ -1,22 +1,40 @@
 {% extends 'base.html' %}
-	{%block title %}All Sessions{% endblock %}
+
+
+{% block title %}All Sessions{% endblock %}
 
 {% block content %}
 
+	<div class="container">
+			{% for session in sessions %}
+			<br>
+				<div class="row" style="border:1px solid black; padding: 20px 0px ">
+					<div class="col-sm-5 offset-sm-1">
+						<div class="row">
+							<img src="{{session.image}}" width="200" height="200">
+							<p>{{session.day}} from {{session.starting_hour}} - {{session.ending_hour}}</p>
+							
+						</div>
+					</div>
 
-	{% for session in sessions %}
+					<div class="col-sm-5">
+						<p>{{session.title}}</p>
+						<p>{{session.chef.first_name}} {{session.chef.last_name}}</p>
+						<p>{{session.mini_description}}</p>
+						
+						<p>{{session.description}}</p>
+					
+						<p>{{session.price}} $</p>
 
-		<p>{{session.title}}</p>
-		
-		<p>{{session.description}}</p>
+						<a href="{% url 'class_schedule_app:session_description' session.id %}"><button> En savoir plus </button></a>
+					</div>
+
+
+				</div>
+
+			{% endfor %}
+	</div>
+	{% endblock %}
 	
-		<p>{{session.price}}</p>
 
-		<a href="{% url 'class_schedule_app:session_description' session.id %}"><button> En savoir plus </button></a>
-
-	{% endfor %}
-
-{% endblock %}
-
-
-
+	
