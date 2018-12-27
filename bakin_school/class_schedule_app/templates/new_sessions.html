@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>new Session Form</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+
+{% block title %}New Session Form{% endblock %}
+
+{% block content %}
+<br>
+	<div class="form-group">
 	<form enctype="multipart/form-data" method='POST'>
 		{% csrf_token %}
 		{{ form.as_p }}
 		<input type="submit" value='Create'>
 	</form>
-</body>
-</html>
-
-
-<form>
-	
-</form>
+	</div>
+	{% endblock %}

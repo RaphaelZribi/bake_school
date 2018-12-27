@@ -3,7 +3,6 @@ from chef_app.models import Chef
 
 class Session(models.Model):
 	title            = models.TextField()
-	mini_description = models.TextField()
 	description      = models.TextField()
 	price            = models.IntegerField()
 	place            = models.IntegerField(default=10)
